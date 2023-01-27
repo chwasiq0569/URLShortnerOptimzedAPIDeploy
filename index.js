@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import router from "./routes/short.js";
 import dotenv from 'dotenv';
-import connectDB from './controller/connectDB.js';
+import connectDB from './connectDB.js';
 
 const app = express();
 dotenv.config()
@@ -11,7 +11,7 @@ dotenv.config()
 //use cors to allow cross origin resource sharing
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true,
   })
 );
