@@ -10,7 +10,7 @@ const shortSchema = new mongoose.Schema({
     type: String,
     required: true,
   }
-});
+}, { timestamps: true });
 
 shortSchema.index({ full: 1 });
 
